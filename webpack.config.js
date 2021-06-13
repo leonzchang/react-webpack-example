@@ -4,11 +4,14 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 
 module.exports = {
+  //setting entry and output
   entry: "./src/index.jsx",
   output: {
     path: path.resolve(__dirname, "dist"),
+    //bundel.js vendor.js and prevent user browser cache when update
     filename: "[name].[hash].js",
   },
+  //setting loader
   module: {
     rules: [
       {
@@ -70,6 +73,9 @@ module.exports = {
       filename: "main.[hash].css"
     })
   ],
+  //for debug
+  devtool: "source-map",
+  //for pack optimization
   optimization: {
     splitChunks: {
       chunks: "all",

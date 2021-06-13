@@ -9,6 +9,7 @@ module.exports = merge(common, {
     new webpack.EnvironmentPlugin({
       NODE_ENV: "production",
     }),
+    //minify js file
     new UglifyJsPlugin({
       cache: true,
     }),

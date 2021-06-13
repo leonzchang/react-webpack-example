@@ -13,7 +13,7 @@ module.exports = merge(common, {
     }),
     new BundleAnalyzerPlugin({ openAnalyzer: false }),
     ],
-  devtool: "source-map",
+  //set up webpack server
   devServer: {
     port: 3000,
     contentBase: path.join(__dirname, "dist"),
