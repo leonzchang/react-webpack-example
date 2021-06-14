@@ -47,7 +47,9 @@ module.exports = {
           {
             loader: "url-loader",
             options: {
+              name: '[name].[ext]',
               limit: 8192, // 8KB
+              fallback: require.resolve('file-loader'),
             },
           } 
         ],
