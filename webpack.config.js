@@ -42,7 +42,7 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader,  "css-loader" ],
       },
       {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.(png|jpg|gif|jpeg)$/,
         use: [
           {
             loader: "url-loader",
@@ -55,7 +55,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+        test: /\.(woff|woff2|eot|ttf|svg)$/,
         use: [
             { 
               loader: "url-loader", 
